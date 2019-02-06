@@ -1,0 +1,250 @@
+.header
+  position: fixed
+  width: 100%
+  z-index: 1
+  &top
+    background-color: #dddddd
+
+  &menu
+    background-color: #00203f
+    border-top: 5px solid #ffa000
+
+  .language
+    background-color: #00203f
+    padding: 5px 15px
+    font-family: 'Montserrat'
+    .dropdown-toggle 
+      font-size: 10px
+      color: #fff
+    &-font
+      color: #00203f
+      font-family: 'Montserrat'
+      font-size: 12px
+      padding: 10px 15px
+      border-bottom: 1px solid #e5e5e5
+      &:hover
+        color: #00203f
+        background-color: #dddddd
+
+  .dropdown-menu
+    border-radius: 0
+    margin-top: -1px
+    padding: 0
+
+  .nav-item
+    a
+      text-decoration: none
+    svg
+      height: 2rem
+      padding: 0 1rem
+      margin-top: 5px
+      fill: #002040
+      &:hover
+        fill: #003466
+
+  .headertop .container .navbar
+    padding: 0
+
+  .form-control
+      font-size: 12px
+      padding-left: 30px
+      font-family: 'open sans italic'
+      background-color: transparent
+      border: 0
+      position: relative
+      &:focus
+        background-color: transparent
+        box-shadow: none
+        color: #003366
+      &::placeholder
+        color: #003366
+
+  form::before
+    content: url("../img/search.svg") 
+    position: absolute
+  .navbar
+    &-brand
+      width: 110px
+      text-align: center
+      margin-right: 0
+      -o-object-fit: cover
+      object-fit: cover
+      background-color: #003466
+      position: relative
+      margin-bottom: -30px
+      margin-top: -8px
+      z-index: 1
+      &::after
+        content: ""
+        height: 0
+        width: 0
+        border-left: 55px solid transparent
+        border-right: 55px solid transparent
+        border-bottom: 90px solid transparent
+        border-top: 20px solid #003466
+        left: 0
+        bottom: -110px
+        position: absolute
+      img
+        width: 60px
+        margin-top: -10px
+    &-menu
+      background-color: #00203f
+      border: none
+
+  .title-brand
+    font-family: 'Montserrat'
+    color: #ffffff
+    font-size: 14px
+    margin: 10px 0
+
+  .header-menu-nav 
+    flex: 1
+    align-items: center
+    li 
+      flex: 1
+      text-align: center
+      position: relative
+      height: 50px
+      &:hover::before
+        content: ""
+        width: 161px
+        height: 5px
+        background-color: red
+        position: absolute
+        top: 59px
+        left: 0
+        right: 0
+      &.show::before
+        content: ""
+        width: 161px
+        height: 5px
+        background-color: red
+        position: absolute
+        top: 59px
+        left: 0
+        right: 0
+        
+      .nav-link 
+        font-size: 12px
+        font-family: 'Montserrat Bold'
+        color: #ffffff
+
+  .menu
+    &-item
+      font-size: 12px
+      font-family: 'Montserrat Bold'
+      padding: 10px 15px
+      border-bottom: 1px solid #e5e5e5
+      &:hover
+        background-color: #dddddd
+        color: #00203f
+    &-dropdown
+      margin-top: 14px
+
+  .bar1, .bar2, .bar3
+    width: 35px
+    height: 5px
+    background-color: #fff
+    margin: 6px 0
+    transition: 0.4s
+
+  .change-left .bar1
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px)
+    transform: rotate(-45deg) translate(-9px, 6px)
+
+
+  .change-left .bar2
+    opacity: 0
+
+  .change-left .bar3
+    -webkit-transform: rotate(45deg) translate(-8px, -8px)
+    transform: rotate(45deg) translate(-8px, -8px)
+
+  @media (max-width: 991px)
+    .navbar
+      &-brand.show
+        display: none
+      &-top
+        background-color: transparent
+        border: none
+      &-toggler-icon
+        fill: #ffffff
+
+    .header-menu-nav
+      align-items: flex-start
+      li 
+        height: auto
+        text-align: left
+        padding-top: 10px
+        width: 100%
+        a
+          border-bottom: 1px solid #ffffff
+        &:hover::before
+          background-color: transparent
+        &.show::before
+          display: none
+        
+    .show
+      &-left
+        position: fixed
+        background-color: #00203f
+        left: -100%
+        height: 100%
+        top: 82px
+        width: auto
+        padding: 0 20px
+        padding-top: 50px
+      &-right
+        position: fixed
+        background-color: #dddddd
+        right: -100%
+        height: 100%
+        top: 82px
+        width: auto
+        padding: 0 20px
+        & ul
+          padding-top: 50px
+
+    .menu-dropdown
+      background-color: #00203f
+      border: none
+
+    .dropdown
+      &-item
+        color: #ffffff
+      &-menu.show
+        background-color: transparent
+        border: none
+        padding-bottom: 15px
+
+    .change-left 
+      .show-left
+        left: 0
+        transition: 0.3s
+      .bg-wrapper
+        visibility: visible
+        opacity: 1
+    
+    .change-right
+      .show-right
+        right: 0
+        transition: 0.3s
+      .bg-wrapper
+        visibility: visible
+        opacity: 1
+
+    .bg-wrapper
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      position: fixed
+      z-index: -99
+      background-color: rgba(6, 6, 6, 0.56)
+      opacity: 0
+      visibility: hidden
+      transition: 0.3s
+
+    button
+      outline: none
