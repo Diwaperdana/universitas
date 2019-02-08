@@ -7,36 +7,7 @@
     object-position: center center
 .slick-list, .slick-track
   height: 100%
-
-.slick-next
-  position: absolute
-  display: block
-  top: 50%
-  right: 0
-
-.slick-prev
-  position: absolute
-  display: block
-  top: 50%
-  left: 0
-  z-index: 99
-
-// .slick-dots
-//   display: flex
-//   position: absolute
-//   bottom: 1%
-//   left: 50%
-//   transform: translateX(-50%)
-//   & li::before
-//     content: ""
-//     display: inline-block
-//     width: 15px
-//     height: 15px
-//     -moz-border-radius: 7.5px
-//     -webkit-border-radius: 7.5px
-//     border-radius: 7.5px
-//     background-color: #69b6d5
-//     outline: none
+  z-index: -99
 
 .slick-dots
   display: flex
@@ -87,7 +58,7 @@
   left: 20px
   top: 50%
   cursor: pointer
-  z-index: 1
+
   &:before
     content: ""
     width: 40px
@@ -121,3 +92,155 @@
   top: 45%
   z-index: 1
   text-align: right
+// Slider End
+
+.bg-mid
+  background-image: url(../img/bg-berita.png)
+  background-size: cover
+  background-repeat: no-repeat
+
+.bg-menu .cover
+  width: 100%
+  height: 100%
+  object-fit: cover
+  opacity: 0.3
+
+.container-menu
+  height: 210px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 2rem
+
+.bg-menu
+  background-color: #003366
+  position: absolute
+  width: 100%
+  height: 100%
+
+.item-bg-menu
+  text-align: center
+  position: relative
+
+// .bg-menu
+//   height: 210px
+//   background-color: #003366
+//   margin-top: 2rem
+//   margin-bottom: -4rem
+
+// .item-bg-menu
+//   text-align: center
+//   transform: translateY(-6rem)
+
+.bg-news-list
+  background-color: #fff
+  margin-bottom: 2rem
+
+.news-body
+  padding: 20px
+
+.bg-news-item
+  height: 185px
+
+.bg-news-item img
+  object-fit: cover
+  width: 100%
+  height: 100%
+
+.news-title
+  font-family: 'Montserrat Bold'
+  &::after
+    content: ''
+    display: block
+    width: 40px
+    height: 3px
+    background-color: #003366
+    margin-top: 10px
+
+.date
+  font-family: 'Open Sans Italic'
+  font-size: 12px
+
+.next-news
+  color: #003366
+  font-size: 12px
+  font-family: 'Open Sans Bold'
+  &:hover
+    color: #00203f
+    text-decoration: none
+
+.news-content
+  font-family: 'Charter'
+  font-size: 12px
+  color: #6a6a6a
+  margin-bottom: 0
+  margin-top: 1rem
+  height: 90px
+  overflow: hidden
+
+h2.title-general
+  color: #003366
+  text-align: center
+  padding: 2rem 0
+  &::after
+    content: ''
+    display: block
+    width: 50px
+    height: 3px
+    background-color: #cc2014
+    margin: 0 auto
+
+.middle .bg-bottom-top
+  margin-bottom: 3rem
+
+.video-bg
+  background-color: #003366
+
+video
+  height: 100%
+  width: 100%
+  object-fit: cover
+  padding-bottom: 10px
+
+.video-bg h2.title-general
+  color: #ffffff
+
+.gallery-thumb
+  height: 210px
+  margin-bottom: 2rem
+
+.gallery-thumb img
+  height: 100%
+  width: 100%
+  object-fit: cover
+
+.video-text,
+.video-date
+  font-family: 'Open Sans'
+  font-size: 12px
+  color: #ffffff
+
+.agenda h2.title-general
+  color: #003366
+  text-align: left
+  padding: 2rem 0
+  &::after
+    content: ''
+    display: block
+    width: 50px
+    height: 3px
+    background-color: #cc2014
+    margin: 0
+
+.agenda-date
+  background-color: #ff9f00
+
+.date-bold
+  font-family: 'Montserrat Bold'
+  color: #ffffff
+
+.date-light
+  font-family: 'Montserrat'
+  font-size: 12px
+  color: #ffffff
