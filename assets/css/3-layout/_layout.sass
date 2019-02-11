@@ -123,16 +123,6 @@
   text-align: center
   position: relative
 
-// .bg-menu
-//   height: 210px
-//   background-color: #003366
-//   margin-top: 2rem
-//   margin-bottom: -4rem
-
-// .item-bg-menu
-//   text-align: center
-//   transform: translateY(-6rem)
-
 .bg-news-list
   background-color: #fff
   margin-bottom: 2rem
@@ -159,8 +149,36 @@
     margin-top: 10px
 
 .date
+  display: flex
+  justify-content: flex-start
+  list-style: none
+  padding-left: 0
   font-family: 'Open Sans Italic'
   font-size: 12px
+  &-bold
+    font-family: 'Montserrat Bold'
+    font-size: 3rem
+    text-align: right
+    color: #ffffff
+    padding-top: 5px
+  &-light
+    font-family: 'Montserrat'
+    text-align: right
+    font-size: 18px
+    color: #ffffff
+    padding-top: 5px
+    padding-bottom: 10px
+
+.dateandplace
+  display: flex
+  justify-content: space-between
+  list-style: none
+  padding-left: 0
+  font-family: "Open Sans Italic"
+  font-size:  12px
+  color: #6a6a6a
+  & li 
+    display: flex
 
 .next-news
   color: #003366
@@ -178,18 +196,6 @@
   margin-top: 1rem
   height: 90px
   overflow: hidden
-
-h2.title-general
-  color: #003366
-  text-align: center
-  padding: 2rem 0
-  &::after
-    content: ''
-    display: block
-    width: 50px
-    height: 3px
-    background-color: #cc2014
-    margin: 0 auto
 
 .middle .bg-bottom-top
   margin-bottom: 3rem
@@ -209,11 +215,10 @@ video
 .gallery-thumb
   height: 210px
   margin-bottom: 2rem
-
-.gallery-thumb img
-  height: 100%
-  width: 100%
-  object-fit: cover
+  & img
+    height: 100%
+    width: 100%
+    object-fit: cover
 
 .video-text,
 .video-date
@@ -221,26 +226,62 @@ video
   font-size: 12px
   color: #ffffff
 
-.agenda h2.title-general
-  color: #003366
-  text-align: left
-  padding: 2rem 0
-  &::after
-    content: ''
-    display: block
-    width: 50px
-    height: 3px
-    background-color: #cc2014
-    margin: 0
+.agenda
+  & h2.title-general 
+    color: #003366
+    text-align: left
+    padding: 2rem 0
+    &::after
+      content: ''
+      display: block
+      width: 50px
+      height: 3px
+      background-color: #cc2014
+      margin: 0
+  &-container
+    border-bottom: 1px solid #6a6a6a
+    padding-bottom: 10px
+    margin-bottom: 25px
+    height: 10rem
+  &-date
+    background-color: #ff9f00
+    padding-right: 10px
+  &-text
+    font-size: 12px
+    font-family: "Charter"
+    color: #6a6a6a
 
-.agenda-date
-  background-color: #ff9f00
+.small-icon
+  height: 20px
+  padding-right: 10px
 
-.date-bold
-  font-family: 'Montserrat Bold'
-  color: #ffffff
+span 
+  margin: 10px
 
-.date-light
-  font-family: 'Montserrat'
-  font-size: 12px
-  color: #ffffff
+.slogan
+  text-align: center
+  color: #fff
+  font-family: "Open Sans Italic"
+  padding: 2rem 0 
+  & span
+    color: #ffa000
+
+.pengumuman-container
+  border: 1px solid #e1e1e1
+  padding: 10px
+  margin-bottom: 20px
+
+// MAPS
+.gm-style .place-card-large
+  display: none !important
+
+.mapouter
+  text-align: right
+  height: 500px
+  width: 100%
+
+.gmap_canvas
+  overflow: hidden
+  background: none !important
+  height: 500px
+  width: 100%
