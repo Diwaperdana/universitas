@@ -4,6 +4,12 @@
 
   .bantitle
     top: 15%
+
+  .next
+    right: 30px
+
+  .prev
+    left: 30px
   // Slider End
 
   p.title-general
@@ -14,6 +20,12 @@
 
   h4.agenda-title
     font-size: 14px
+
+  .icon
+    height: 60px
+
+  .date-bold
+    font-size: 2.5rem
 
 @media (max-width: 767px)
   .bantext
@@ -40,6 +52,51 @@
 
   .fr
     justify-content: center
+
+  .button-orange
+    margin-bottom: 25px
+
+  h2.title-general
+    font-size: 24px
+
+  .agenda 
+    & h2.title-general
+      text-align: center
+      &::after
+        margin: 0 auto
+    &-date
+      padding-right: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      padding-top: 10px
+      margin-bottom: 20px
+
+  .date
+    &-bold
+      font-size: 3.5rem
+      padding-top: 0
+      padding-right: 10px
+    &-light
+      font-size: 18px
+      color: #ffffff
+      padding-top: 0
+      padding-bottom: 0
+
+  .icon
+    height: 75px
+
+  p.title-general
+    font-size: 18px
+
+  .mapouter
+    height: 300px
+  
+  .gmap_canvas
+    height: 300px
+
+  iframe
+    height: 300px
   
 
 @media (max-width: 575px)
