@@ -15,25 +15,27 @@
   bottom: 1%
   left: 50%
   transform: translateX(-50%)
+  list-style: none
   & li
     list-style: none
     &::before
       content: ""
       display: inline-block
-      width: 15px
-      height: 15px
+      width: 10px
+      height: 10px
       cursor: pointer
       -moz-border-radius: 7.5px
       -webkit-border-radius: 7.5px
       border-radius: 7.5px
       background-color: #ffffff
-      &:active
-        background-color: orange
     & button
       color: transparent
       border: 0
       outline: none
       background: transparent
+
+.slick-active::before
+  background-color: #ffa000 !important
 
 .next
   position: absolute
@@ -112,6 +114,10 @@
   align-items: center
   justify-content: center
   margin-bottom: 2rem
+  &:hover
+    transform: scale(1.1)
+    transition: 0.3s
+    text-decoration: none
 
 .bg-menu
   background-color: #003366
@@ -126,6 +132,7 @@
 .bg-news-list
   background-color: #fff
   margin-bottom: 2rem
+  border: 1px solid #e1e1e1
 
 .news-body
   padding: 20px
@@ -185,7 +192,7 @@
   font-size: 12px
   font-family: 'Open Sans Bold'
   &:hover
-    color: #00203f
+    color: #ffa000
     text-decoration: none
 
 .news-content
@@ -219,6 +226,9 @@ video
     height: 100%
     width: 100%
     object-fit: cover
+    &:hover
+      transform: scale(1.1)
+      transition: 0.3s
 
 .video-text,
 .video-date
@@ -270,6 +280,17 @@ span
   border: 1px solid #e1e1e1
   padding: 10px
   margin-bottom: 20px
+  &.active
+    background-color: #003466
+    border: 1px solid #003466
+    & .date li 
+      color: #ffffff
+    & .agenda-text
+      color: #ffffff
+    & h4.agenda-title a
+      color: #ff9f00
+      &:hover
+        color: #ffffff
 
 // MAPS
 .gm-style .place-card-large
@@ -289,3 +310,75 @@ span
 iframe
   width: 100%
   height: 500px
+
+// Other Page
+.breadcrumb
+  background-color: #fff
+  &-item
+    &.active
+      font-family: "Open Sans"
+      color: #cc2014
+    & a
+      font-family: "Open Sans"
+      color: #aaaaaa
+
+.paging
+  display: flex
+  justify-content: flex-end
+
+.page
+  &-item 
+    & .page-link
+      background-color: #ffffff
+      border-color: #e1e1e1
+      color: #e1e1e1
+      height: 40px
+      width: 40px
+      text-align: center
+      margin-right: 10px
+      &:hover
+        background-color: #ff9f00
+        border-color: #ff9f00
+      &:focus,
+      &:active
+        box-shadow: none
+    &.disabled .page-link
+      background-color: #ff9f00
+      border-color: #ff9f00
+      color: #ffffff
+      height: 40px
+      width: 40px
+      text-align: center
+      margin-right: 10px
+  &-item:first-child .page-link
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+  &-item:last-child .page-link
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+.bg-pedia
+  border: 1px solid #e1e1e1
+  margin-bottom: 2rem
+
+.pedia
+  &-warp 
+    padding: 0 20px
+  &-thumb
+    height: 190px
+    margin-bottom: 2rem
+    border-top: 1px solid #e1e1e1
+    padding-top: 20px
+    & img
+      height: 100%
+      width: 100%
+      object-fit: cover
+  &-content
+    font-family: 'Open Sans'
+    font-size: 12px
+    color: #6a6a6a
+    margin-bottom: 2rem
+    
+
+
+  
