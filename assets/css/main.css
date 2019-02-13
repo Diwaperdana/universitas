@@ -7899,21 +7899,12 @@ html {
 .banner {
   position: relative; }
 
-.bantitle {
-  color: #fff;
-  font-size: 3rem;
-  position: absolute;
-  right: 8%;
-  top: 27%;
-  z-index: 1;
-  text-align: right; }
-
 .bantext {
   color: #fff;
   font-size: 12px;
   position: absolute;
   right: 8%;
-  top: 45%;
+  top: 25%;
   z-index: 1;
   text-align: right; }
 
@@ -7935,11 +7926,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  transition: 0.3s; }
   .container-menu:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    transition: 0.3s;
     text-decoration: none; }
 
 .bg-menu {
@@ -8014,9 +8005,9 @@ html {
 .next-news {
   color: #003366;
   font-size: 12px;
-  font-family: 'Open Sans Bold'; }
+  font-family: 'Open Sans Bold';
+  transition: 0.3s; }
   .next-news:hover {
-    color: #ffa000;
     text-decoration: none; }
 
 .news-content {
@@ -8051,11 +8042,11 @@ video {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    transition: 0.3s; }
     .gallery-thumb img:hover {
       -webkit-transform: scale(1.1);
-              transform: scale(1.1);
-      transition: 0.3s; }
+              transform: scale(1.1); }
 
 .video-text,
 .video-date {
@@ -8162,7 +8153,8 @@ iframe {
   margin-right: 10px; }
   .page-item .page-link:hover {
     background-color: #ff9f00;
-    border-color: #ff9f00; }
+    border-color: #ff9f00;
+    color: #ffffff; }
   .page-item .page-link:focus, .page-item .page-link:active {
     box-shadow: none; }
 
@@ -8286,10 +8278,10 @@ iframe {
       width: 0;
       border-left: 55px solid transparent;
       border-right: 55px solid transparent;
-      border-bottom: 90px solid transparent;
+      border-bottom: 0px solid transparent;
       border-top: 20px solid #003466;
       left: 0;
-      bottom: -110px;
+      bottom: -20px;
       position: absolute; }
     .header .navbar-brand img {
       width: 60px;
@@ -8541,7 +8533,7 @@ iframe {
   background-color: orange;
   color: #002040;
   padding: 8px 20px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Open Sans Bold";
   margin: 10px 0; }
   .button-orange:hover {
@@ -8553,7 +8545,7 @@ iframe {
   background-color: #003366;
   color: #ffffff;
   padding: 8px 20px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Open Sans Bold";
   margin: 10px 0; }
   .button-blue:hover {
@@ -8600,7 +8592,8 @@ h2.title-pedia {
     margin: 0 auto; }
 
 h4.agenda-title {
-  font-family: "Montserrat Bold"; }
+  font-family: "Montserrat Bold";
+  font-size: 16px; }
   h4.agenda-title a {
     color: #000; }
     h4.agenda-title a:hover {
@@ -8608,31 +8601,41 @@ h4.agenda-title {
       text-decoration: none; }
 
 p.title-general {
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 0 15px; }
 
 .fr {
   display: flex;
   justify-content: flex-end; }
+  .fr .button-orange {
+    display: flex;
+    align-items: center; }
 
 @media (max-width: 991px) {
   .bantext {
-    top: 27%; }
-  .bantitle {
-    top: 15%; }
+    top: 25%;
+    right: 11%;
+    font-size: 9px; }
+    .bantext h1 {
+      font-size: 28px; }
   .next {
     right: 30px; }
   .prev {
     left: 30px; }
   p.title-general {
-    font-size: 12px; }
+    font-size: 10px; }
   .news-title {
     font-size: 12px; }
   h4.agenda-title {
     font-size: 14px; }
   .icon {
-    height: 60px; }
+    height: 35px; }
   .date-bold {
     font-size: 2.5rem; }
+  .dateandplace {
+    display: inline-table; }
+    .dateandplace li {
+      margin-bottom: 10px; }
   .pedia-thumb {
     height: 130px; }
   .pedia-content {
@@ -8641,16 +8644,18 @@ p.title-general {
   h2.title-pedia {
     font-size: 24px; }
   .bg-news-item {
-    height: 150px; } }
+    height: 150px; }
+  .container-menu {
+    height: 110px; }
+  .gallery-thumb {
+    height: 125px; }
+  .slider {
+    height: 50vh; } }
 
 @media (max-width: 767px) {
   .bantext {
     top: 45%;
     font-size: 10px;
-    right: 10%; }
-  .bantitle {
-    top: 30%;
-    font-size: 1.5rem;
     right: 10%; }
   .next:before {
     width: 25px;
@@ -8658,6 +8663,8 @@ p.title-general {
   .prev:before {
     width: 25px;
     height: 25px; }
+  .slider {
+    height: 84vh; }
   h6.title-general {
     text-align: center; }
   .fr {
@@ -8667,6 +8674,9 @@ p.title-general {
   h2.title-general,
   h2.title-pedia {
     font-size: 24px; }
+  .agenda-container {
+    margin-left: 15px;
+    margin-right: 15px; }
   .agenda h2.title-general {
     text-align: center; }
     .agenda h2.title-general::after {
@@ -8683,12 +8693,11 @@ p.title-general {
     padding-top: 0;
     padding-right: 10px; }
   .date-light {
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
-    padding-top: 0;
     padding-bottom: 0; }
   .icon {
-    height: 75px; }
+    height: 60px; }
   p.title-general {
     font-size: 18px; }
   .mapouter {
@@ -8700,28 +8709,31 @@ p.title-general {
   .pedia-thumb {
     height: 185px; }
   .bg-news-item {
-    height: 185px; } }
+    height: 185px; }
+  .container-menu {
+    height: 170px; } }
 
 @media (max-width: 575px) {
-  .bantitle {
-    top: 25%;
-    font-size: 1rem;
-    text-align: center;
-    left: 20%;
-    -webkit-transform: translateX(-10%);
-            transform: translateX(-10%); }
   .bantext {
-    bottom: 30%;
+    top: 32%;
     font-size: 8px;
     text-align: center;
     left: 7%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
+    color: #00203f; }
+    .bantext h1 {
+      font-size: 18px; }
+  .next {
+    right: 15px; }
+  .prev {
+    left: 15px; }
   h6.title-general {
     text-align: center; }
   .fr {
     justify-content: center; }
   .breadcrumb {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .navbar {
+    padding-left: 0;
+    padding-right: 0; } }
 
 /*# sourceMappingURL=main.css.map */
