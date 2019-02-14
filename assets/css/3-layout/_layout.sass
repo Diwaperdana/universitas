@@ -198,17 +198,42 @@
 .middle .bg-bottom-top
   margin-bottom: 3rem
 
-.video-bg
-  background-color: #003366
+.video
+  &-bg
+    background-color: #003366
+    & h2.title-general
+      color: #ffffff
+  &-thumb
+    height: 360px
+    margin-bottom: 20px
+    & img
+      height: 100%
+      width: 100%
+      object-fit: cover
 
-video
-  height: 100%
-  width: 100%
-  object-fit: cover
-  padding-bottom: 10px
-
-.video-bg h2.title-general
-  color: #ffffff
+.play
+  &-bg
+    height: 360px
+    position: relative
+    width: auto
+    background-color: transparent
+    margin-top: -360px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.3s
+    &:hover
+      background-color: rgba(0, 0, 0, 0.32)
+  &-button
+    width: 0
+    height: 0
+    border-top: 30px solid transparent
+    border-left: 35px solid red
+    border-bottom: 30px solid transparent
+    &:hover
+      border-top: 30px solid transparent
+      border-left: 35px solid #dddddd
+      border-bottom: 30px solid transparent
 
 .gallery-thumb
   height: 210px
@@ -371,6 +396,8 @@ iframe
     font-size: 12px
     color: #6a6a6a
     margin-bottom: 2rem
+
+
     
 
 
