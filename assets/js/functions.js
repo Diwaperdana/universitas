@@ -14,11 +14,8 @@ $( document ).ready(function() {
     prevArrow: '<i class="prev"></i>'
   });
 
-  
-  autoPlayYouTubeModal();
-
   //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-  function autoPlayYouTubeModal() {
+  (function autoPlayYouTubeModal() {
     var trigger = $("body").find('[data-toggle="modal"]');
     trigger.click(function () {
       var theModal = $(this).data("target"),
@@ -32,5 +29,5 @@ $( document ).ready(function() {
         $(theModal + ' iframe').attr('src', videoSRC);
       })
     });
-  }
+  })();
 });

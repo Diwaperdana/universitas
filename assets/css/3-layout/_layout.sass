@@ -182,9 +182,11 @@
   color: #003366
   font-size: 12px
   font-family: 'Open Sans Bold'
+  display: block
   transition: 0.3s
   &:hover
     text-decoration: none
+    transform: scale(1.1)
 
 .news-content
   font-family: 'Charter'
@@ -224,16 +226,16 @@
     transition: 0.3s
     &:hover
       background-color: rgba(0, 0, 0, 0.32)
+      .play-button
+        border-left-color: #dddddd
+      
   &-button
     width: 0
     height: 0
     border-top: 30px solid transparent
     border-left: 35px solid red
     border-bottom: 30px solid transparent
-    &:hover
-      border-top: 30px solid transparent
-      border-left: 35px solid #dddddd
-      border-bottom: 30px solid transparent
+    transition: 0.3s
 
 .gallery-thumb
   height: 210px
@@ -289,7 +291,8 @@ span
   text-align: center
   color: #fff
   font-family: "Open Sans Italic"
-  padding: 2rem 0 
+  padding: 2rem 0
+  margin-bottom: 0
   & span
     color: #ffa000
 
