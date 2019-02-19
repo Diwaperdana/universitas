@@ -8062,18 +8062,51 @@ html {
   border-bottom: 30px solid transparent;
   transition: 0.3s; }
 
-.gallery-thumb {
+.gallery-hover {
+  display: block;
+  transition: 0.3s; }
+  .gallery-hover:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    text-decoration: none; }
+
+.gallery-thumb-collection::before {
+  content: '';
+  background-image: url(../img/gallery.svg);
+  background-size: 50px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  margin-top: 7px;
+  left: -10px; }
+
+.gallery-thumb, .gallery-thumb-collection {
   height: 210px;
-  margin-bottom: 2rem; }
-  .gallery-thumb img {
+  margin-bottom: 2rem;
+  position: relative; }
+  .gallery-thumb img, .gallery-thumb-collection img {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     transition: 0.3s; }
-    .gallery-thumb img:hover {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1); }
+
+.gallery-text {
+  background-color: rgba(0, 0, 0, 0.59);
+  padding: 5px 10px;
+  position: relative;
+  bottom: 82px;
+  font-family: 'Montserrat Bold';
+  color: #fff;
+  font-size: 12px;
+  height: 50px;
+  margin-bottom: 0;
+  align-items: center;
+  display: flex; }
 
 .video-text,
 .video-date {
@@ -8675,8 +8708,12 @@ p.title-general {
     height: 150px; }
   .container-menu {
     height: 110px; }
-  .gallery-thumb {
+  .gallery-thumb, .gallery-thumb-collection {
     height: 125px; }
+  .gallery-thumb-collection::before {
+    background-size: 25px; }
+  .gallery-text {
+    font-size: 8px; }
   .slider {
     height: 50vh; }
   .play-bg {
@@ -8745,8 +8782,12 @@ p.title-general {
     height: 185px; }
   .container-menu {
     height: 170px; }
-  .gallery-thumb {
+  .gallery-thumb, .gallery-thumb-collection {
     height: 185px; }
+  .gallery-thumb-collection::before {
+    background-size: 40px; }
+  .gallery-text {
+    font-size: 12px; }
   .play-bg {
     height: 200px;
     margin-top: -200px; }
@@ -8782,5 +8823,49 @@ p.title-general {
   .navbar {
     padding-left: 0;
     padding-right: 0; } }
+
+/* Next & previous buttons */
+.modal-prev,
+.modal-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white !important;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none; }
+
+/* Position the "next button" to the right */
+.modal-next {
+  right: 16px;
+  border-radius: 3px 0 0 3px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.modal-prev:hover,
+.modal-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0s; }
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

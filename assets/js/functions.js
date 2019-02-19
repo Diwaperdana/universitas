@@ -30,4 +30,26 @@ $( document ).ready(function() {
       })
     });
   })();
+
+  $(function () {
+    $('.first-button').on('click', function () {
+      $('.first-content').animate({
+        width: "toggle"
+      }, 800);
+      $('.second-content').delay(800).animate({
+        width: "toggle"
+      });
+    });
+
+    $('.second-content').on('click', function () {
+      $('.second-content').animate({
+        width: "toggle"
+      });
+      $('.first-content').delay(800).animate({
+        width: "toggle"
+      }, 800);
+    });
+
+  });
+  
 });

@@ -237,16 +237,48 @@
     border-bottom: 30px solid transparent
     transition: 0.3s
 
-.gallery-thumb
-  height: 210px
-  margin-bottom: 2rem
-  & img
-    height: 100%
-    width: 100%
-    object-fit: cover
+.gallery
+  &-hover
+    display: block
     transition: 0.3s
     &:hover
       transform: scale(1.1)
+      text-decoration: none
+  &-thumb-collection::before
+    content: ''
+    background-image: url(../img/gallery.svg)
+    background-size: 50px
+    height: 100%
+    width: 100%
+    position: absolute
+    -o-object-fit: cover
+    object-fit: cover
+    background-repeat: no-repeat
+    background-position-x: right
+    margin-top: 7px
+    left: -10px
+  &-thumb,
+  &-thumb-collection
+    height: 210px
+    margin-bottom: 2rem
+    position: relative
+    & img
+      height: 100%
+      width: 100%
+      object-fit: cover
+      transition: 0.3s
+  &-text
+    background-color: rgba(0, 0, 0, 0.59)
+    padding: 5px 10px
+    position: relative
+    bottom: 82px
+    font-family: 'Montserrat Bold'
+    color: #fff
+    font-size: 12px
+    height: 50px
+    margin-bottom: 0
+    align-items: center;
+    display: flex;
       
 
 .video-text,
